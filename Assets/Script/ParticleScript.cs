@@ -14,7 +14,7 @@ public class ParticleScript : MonoBehaviour
     {
         if(particleSystem.isStopped)
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 5);
         }
     }
 }
