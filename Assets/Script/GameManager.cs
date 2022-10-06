@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TimeLeft = 20;
+        TimeLeft = 40;
 
         Score = 0;
         TargetScore = 10 * GameObject.FindGameObjectsWithTag("Coin").Length;
