@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class CheckCollision : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class CheckCollision : MonoBehaviour
     {
         if(other.gameObject.tag == "Coin")
         {
+            Instantiate(AssetDatabase.LoadAssetAtPath("Assets/Standard Assets/ParticleSystems/Prefabs/Fireworks.prefab", typeof(GameObject)), other.gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
             GameManager.Score += 10;
             Destroy(other.gameObject);
         }
