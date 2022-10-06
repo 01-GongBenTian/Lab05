@@ -8,6 +8,9 @@ public class GameplayUI : MonoBehaviour
     [SerializeField]
     private Text ScoreDisplay;
 
+    [SerializeField]
+    private Text TimerDisplay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +21,6 @@ public class GameplayUI : MonoBehaviour
     void Update()
     {
         ScoreDisplay.text = "  Score: " + GameManager.Score;
+        TimerDisplay.text = string.Format("Timer: {0}  ", GameManager.TimeLeft);
     }
 }
